@@ -48,7 +48,9 @@ After preprocessing, the texts are converted into numerical representations:
 - Naive Bayes (GaussianNB)
 - Decision Tree
 - AdaBoost
-![Model Diagram](output/machine_learning_models.png)
+
+  
+    ![Model Diagram](output/machine_learning_models.png)
 
 - **Performance Evaluation:** The performance of each model is evaluated using metrics such as accuracy and F1-score (Macro Average), as well as classification reports and confusion matrices.
 
