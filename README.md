@@ -56,7 +56,7 @@ After preprocessing, the texts are converted into numerical representations:
 
 ## Results
 The results of the model evaluation are presented in a table that compares the performance of each model against each text representation, focusing on accuracy and F1-score. Graphical representations are also provided to visually compare performance.
-
+  ![Model Diagram].(output/Performance_Evaluation_of_Text_Models.png)
 ## Requirements (Dependencies)
 Running this project requires the following libraries:
 - `pandas`
