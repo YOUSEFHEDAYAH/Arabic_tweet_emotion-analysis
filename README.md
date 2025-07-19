@@ -39,24 +39,41 @@ After preprocessing, the texts are converted into numerical representations:
 - **TF-IDF (Term Frequency-Inverse Document Frequency):** Represents texts based on the importance of words in the document relative to the overall collection of documents.
 - **Word2Vec (FastText):** Uses word embedding models to represent words as dense vectors that capture contextual meaning.
 
-### 4. Model Building and Evaluation
-- **Label Encoding:** Converts textual sentiment labels into numerical values.
-- **Data Splitting:** Splitting the dataset into training and test sets.
-- **Model Training:** The following models are trained on each text representation:
-- Support Vector Machine (SVM)
-- Random Forest
-- Naive Bayes (GaussianNB)
-- Decision Tree
-- AdaBoost
+## 🧠 Models Used
 
-  
-    ![Model Diagram](output/machine_learning_models.png)
-
+### 4. Classical Machine Learning Models
+- **Logistic Regression**
+- **Random Forest**
+- **K-Nearest Neighbors**
+- **Naive Bayes**
+- **Support Vector Machines**
 - **Performance Evaluation:** The performance of each model is evaluated using metrics such as accuracy and F1-score (Macro Average), as well as classification reports and confusion matrices.
+
+  ![Model Diagram](output/machine_learning_models.png)
+  ![Model Diagram](output/Performance_Evaluation_of_Text_Models.png)
+
+
+Each model was trained on TF-IDF vectorized tweets and evaluated using accuracy, F1-score, and confusion matrices.
+
+### 5. Deep Learning Models
+- **LSTM**-based RNN using `Keras`
+  - Architecture: Embedding → LSTM → Dense
+  - Used Dropout regularization and categorical crossentropy loss
+  - Input vectorized using Keras Tokenizer
+  - Evaluated using validation accuracy and loss
+
+### 6. Transformer-Based Model (BERT)
+- **Pretrained Arabic BERT Model** (via HuggingFace Transformers)
+  - Used `AutoTokenizer` and `AutoModel` from the `transformers` library
+  - Fine-tuned on the same dataset
+  - Leveraged PyTorch for training and GPU acceleration (Colab)
+  - Achieved best performance among all models in terms of generalization
+
+
+
 
 ## Results
 The results of the model evaluation are presented in a table that compares the performance of each model against each text representation, focusing on accuracy and F1-score. Graphical representations are also provided to visually compare performance.
-  ![Model Diagram](output/Performance_Evaluation_of_Text_Models.png)
 
   
 ## Requirements (Dependencies)
